@@ -1,0 +1,135 @@
+<div><h2>Add Contact</h2>
+<div class="flex">
+
+<form (ngSubmit)="onSubmit()">
+<div>
+<label for="name">Name:</label>
+  <input type="text" minlength="2" class="form-control" name="name" placeholder="Name" [(ngModel)]="form.name" #name=
+  'ngModel'required />
+ 
+
+</div>
+<div class="name" *ngIf="name.invalid &&(name.dirty||name.touched)"
+class="alert alert-danger">
+<div *ngIf="name.errors?.['required']">
+  Name is required.
+</div>
+<div *ngIf="name.errors?.['minlength']">
+  Name must be at least 4 characters long.
+</div>
+
+</div>
+
+<div>
+  <label for="phone">Phone:</label>
+  <input type="text" minlength="10" class="form-control" name="phone" placeholder="Phone"[(ngModel)]="form.phone" #phone=
+  'ngModel' required  >
+
+</div>
+<div class="name" *ngIf="phone.invalid  &&(phone.dirty||phone.touched)"
+  class="alert alert-danger">
+  <div *ngIf="phone.errors?.['required']">
+    phone number is required.
+  </div>
+  <div *ngIf="phone.errors?.['minlength']">
+    phone number must be at least 10 characters long.
+  </div>
+ 
+</div>
+
+<div>
+  <label for="email">Email:</label>
+  <input type="email" class="form-control"  name="email" minlength="8" placeholder="Email" [(ngModel)]="form.email" #email=
+  'ngModel' required/>
+
+</div>
+
+
+<div class="add-add" ><button type="submit" > <fa-icon [icon]="faCirclePlus" class="fa-1x" style="color:green; margin-left:10px;padding-left:10px;"></fa-icon></button></div>
+
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="flex m-auto h-screen">
+    <div class="row">
+      <div class="col-12">
+     <form (ngSubmit)="onSubmit"()>
+          <div class="">
+            <div class="form-group">
+              <input type="text" minlength="2" class="form-control" name="name"
+                          [value]="name" placeholder="Name" />
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="phone"
+                      [value]="phone" placeholder="Phone"/>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" name="email"
+                    [value]="email" placeholder="Email" />
+
+
+                    <div><button class='btn'
+                        type="submit"
+                        >ADD</button>
+                    
+                    
+                    </div>                  
+                </div>
+            </div>
+            </form>
+          </div>
+       
+        </div>
+      </div>
+                           -->
+            <!-- </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="organization"
+                        [value]="organization" placeholder="Organization" ngModel required #orgCtrl="ngModel"/>
+            </div> -->
+            <!-- <div class="form-group">
+              <input type="text" class="form-control" name="notes"
+                        [value]="notes" placeholder="Notes" ngModel #noteCtrl="ngModel"/>
+            </div> -->
+            <!-- <div class="form-group">
+              <button class="btn"
+                          type="submit"
+                          [disabled]="form.invalid"
+                          [ngClass]="{'btn-primary': nameCtrl !== '' && phoneCtrl !== '' && emailCtrl !== '' && orgCtrl !== '', 'btn-default': nameCtrl == '' && phoneCtrl == '' && emailCtrl == '' && orgCtrl == ''}"
+                          >Add Contact</button>
+            </div> -->
+        
+  

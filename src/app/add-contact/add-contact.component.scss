@@ -1,0 +1,64 @@
+.flex {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem auto;
+}
+
+button {
+  margin-top: 10px;
+  color: red;
+  margin: 0.5rem auto;
+  padding-top: -1rem;
+  border-color: transparent;
+  margin-left: 50px;
+  padding: 0.5rem;
+}
+.form-control {
+  display: block;
+  width: 300px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+h2 {
+  color: red;
+  margin-left: 50px;
+}
+.name {
+  color: red;
+  font-size: 15px;
+  margin-left: 55px;
+}
+button:hover {
+  background-color: black;
+  color: white;
+}
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+.back {
+  margin: 10px;
+  margin-left: 50px;
+}
+.alert-danger {
+  --bs-alert-color: #842029;
+  --bs-alert-bg: #f8d7da;
+  --bs-alert-border-color: #f5c2c7;
+  width: 300px;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+}
+.flex[_ngcontent-xan-c51] {
+  padding: 1.5rem;
+  // font-size: 12px;
+  margin: 0.5rem auto;
+}
+.add-add button {
+  color: green;
+}
+.add-add button{
+ background-color:transparent;
+// margin-left:10px;
+border-color:transparent;
+font-size:40px; 
+}

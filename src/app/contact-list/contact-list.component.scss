@@ -1,0 +1,155 @@
+button {
+  margin-left: 50px;
+  margin-top: 10px;
+  color: red;
+  margin: 0.5rem auto;
+  padding-top: -1rem;
+  border-color: transparent;
+}
+
+.del{
+  margin-left:150px;
+  margin-top:-40px;
+  background-color:transparent;
+}
+
+.deleted-dd button{
+background-color:transparent;
+margin-top:30px;
+font-size:30px;
+}
+.del button{
+   background-color:transparent;
+}
+.form-group {
+  padding: 1rem;
+  font-size: 19px;
+  margin-left: -20px;
+}
+label {
+  padding: 1rem 1rem 2rem 1rem;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+a {
+  // background-color: #3f525c5a;
+  border-radius: 1px;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  width: 160px;
+  color: blue;
+  // box-sizing: border-box;
+  margin: 0.5rem auto;
+  margin-left: 10px;
+}
+
+
+.list{
+   border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.5rem ;
+  //  padding: 2rem;
+  padding-top:10px;
+   width:200px;
+   height:40px;
+   padding-left:-4px;
+   margin-top:10px;
+   margin-left:40px;
+  //  width: fit-content;
+
+}
+
+
+
+
+.search-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.id {
+  padding: 0;
+  margin-left: 10px;
+  max-width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.add-details {
+  margin-left: -260px;
+  margin-top: 10px;
+}
+.add-details button {
+  padding: 8px;
+  font-size: 20px;
+  border-color: rgba(128, 128, 128, 0.091);
+  background-color: transparent;
+  margin-left: 300px;
+  color: green;
+}
+h1 {
+  color: red;
+  font-size: 30px;
+  margin-left: 50px;
+}
+.form-control {
+  margin-top: -60px;
+  margin-left: 150px;
+  width: 200px;
+}
+
+.button-div {
+  margin-left: 50px;
+  font-size: 20px;
+}
+.deleted {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.checker {
+  margin-left: 70px;
+  font-size: 20px;
+}
+.create-group button {
+  padding: 8px;
+  font-size: 20px;
+  border-color: rgba(128, 128, 128, 0.091);
+  background-color: transparent;
+  margin-top:20px;
+
+  color: green;
+}
+.create-group {
+  margin-left: 170px;
+  margin-top: -90px;
+}
+
+.add-details button{
+background-color:transparent;
+// margin-left:10px;
+border-color:transparent;
+font-size:40px;
+margin-top:20px;
+}
+.add-details[_ngcontent-fow-c56] button[_ngcontent-fow-c56] {
+    padding: 8px;
+    font-size: 20px;
+    // border-color: rgba(128, 128, 128, 0.091);
+    background-color: transparent;
+    margin-left: 300px;
+    color: green;
+}
+.check{
+   border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.5rem ;
+   padding: 1rem;
+   width: fit-content;
+   
+}

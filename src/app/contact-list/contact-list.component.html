@@ -1,0 +1,74 @@
+<div class="cc"><h1>Contact List</h1>
+  <div class="id">
+    <div class="form-group">
+      <label for="search-text">Search Text:</label>
+      <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
+        [(ngModel)]="searchText" placeholder="Enter text to search" 
+        autofocus>
+    </div>
+  
+<div>
+
+ <div class="button-div">
+  <button class="delete" (click)="deleteMultiple=!deleteMultiple" [disabled]=" listEmpty">
+
+   {{deleteMultiple ? "undo" : "delete multiple contact"}}
+  </button>
+</div>
+<div *ngIf="!deleteMultiple" class="deleted">
+  <div class="search-text" *ngFor ="let eachContact of contact|appFilter:searchText">
+  <div class="list">
+ <a 
+ 
+    routerLink="/contactDetails/{{eachContact.id}}">
+  
+
+  
+  
+   {{eachContact.name}}
+</a>
+<div class="del">
+<button type="button" (click)="remove(eachContact.id)">
+  <fa-icon [icon]="faCircleMinus" class="fa-1x" style="color:black; margin-left:10px;padding-left:10px;"></fa-icon>
+    <!-- <fa-icon [icon]="faCirclePlus" class="fa-3x" style="color: green;"></fa-icon> -->
+</button></div>
+
+</div>
+</div>
+
+
+<div class="add-details">
+ 
+ 
+    <button type="button" [routerLink]='["/addContact"]'>
+    <fa-icon [icon]="faCirclePlus" class="fa-1x" style="color:green; margin-left:10px;padding-left:10px;"></fa-icon>
+    
+    </button></div>
+
+ 
+</div>
+</div>
+
+  
+
+<div  class=" checker" *ngIf="deleteMultiple">
+<div class="check">
+<div *ngFor="let eachContact of contact">
+<input type="checkbox" name="{{eachContact.id}}" [value]="eachContact.id " (change)="onSelected($event,eachContact.id)" />{{eachContact.name}}
+
+</div>
+</div>
+<div class="deleted-dd">
+<button (click)="deleteContacts()">
+  <fa-icon [icon]="faTrashCan" class="fa-1x" style="color:black; margin-left:10px;padding-left:10px;"></fa-icon>
+</button>
+</div>
+</div>
+<div class="create-group">
+  <button type="button" [routerLink]='["/contactGroup"]'> Create group</button></div>
+</div>
+</div>
+
+
+
+

@@ -1,0 +1,28 @@
+<div class="container-page">
+    <div class="outer-div">
+        <div class="inner-div">
+            <p>{{"add new group"|titlecase}}</p>
+
+            <form *ngIf="reactiveForm" [formGroup]="reactiveForm" (ngSubmit)="submitContact()">
+                <div class="group-name-div">
+                    <label for="name">Group Name:</label>
+                    <input type="text" id="name" formControlName="name">
+                </div>
+                <div class="members-div">
+                    <label for="members">Members:</label>
+                    <div *ngFor="let eachContact of contactList">
+                        <input type="checkbox" (change)="onSelect($event,eachContact.id)" name="selectedMembers">
+                        {{eachContact.name|titlecase}}
+                    </div>
+                </div>
+<div class="addd">
+                <button type="submit" class="add" [disabled]="!reactiveForm.valid"><fa-icon [icon]="faCirclePlus" class="fa-1x" style="color:green; margin-left:10px;padding-left:10px;"></fa-icon></button>
+           </div>
+            </form>
+        </div>
+        <button  type="button"class="go-back" (click)="goBack()" >
+         Go back
+        </button>
+    </div>
+</div>
+
