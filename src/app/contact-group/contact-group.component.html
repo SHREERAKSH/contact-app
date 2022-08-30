@@ -1,0 +1,32 @@
+
+<div class="container-page">
+  <div class="outer-div">
+      <div class="inner-div" *ngFor="let eachGroup of groupList">
+          <div>
+              <div class="content">
+              <div class="group-name">
+                  {{eachGroup.name|titlecase}}
+              </div>
+             
+               <div class="members-heading">Members:</div>
+                 <ul *ngFor="let eachMember of eachGroup.members">
+                    <div class="member-name">
+                         {{memberNameFromId(eachMember)|titlecase}}
+                     </div>
+                 </ul>
+             </div>
+          </div>
+          <!-- <button class="icon-x" title="Delete {{eachGroup.name}} group" (click)="removeGroup(eachGroup.id)">
+           
+          </button> -->
+      </div>
+      <div class="add-center" >
+          <a routerLink="/groupAdd">
+         <button type="button"><fa-icon [icon]="faCirclePlus" class="fa-1x" style="color:green; margin-left:10px;padding-left:10px;"></fa-icon>  </button>  
+          </a>
+      </div>
+<div class="go-group">
+  <button type="button" [routerLink]='["/contactList"]'> Go back</button></div>
+ 
+</div>
+  </div>
